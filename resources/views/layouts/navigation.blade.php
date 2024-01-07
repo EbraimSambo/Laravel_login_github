@@ -15,8 +15,17 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div>
+                    </div>
+             </div>
+
+            <div class="flex flex-col justify-center">
+                <a href="{{ route('ticket.create')}}" class="ms-3 bg-stone-900 rounded-lg p-2">
+                   suporte bilhete
+                </a>
             </div>
+
+
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

@@ -64,3 +64,41 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+##comandos
+<p>
+artisan migrate:refresh --seed: faz uma nova migração e insere dados falfos
+artisan migrate:refresh --see   insera dados falsos
+artisan make:factory ListingFactory: cria um arqivov factorial para simular entrada de dados
+artisan make:model Listing
+artisan db:seed
+ artisan migrate:refresh
+artisan migrate
+artisan make:migration create_listings_table
+composer require itsgoingd/clockwork
+php artisan vendor:publish para editar algumas configurações relacionada ao laravel
+php  artisan tinker: serve para consultar rela~çoes ou tabelas no terminal
+sempre alterar o arquivo App serviceProvider e colocar o  Model::unguard();
+
+temos que alterar o confg filstymey de colacl para public
+
+
+Model::inRandomOrder()->take(8)->get() para fazer rand
+
+ composer require laravel/breeze --dev
+
+ php artisan breeze:install
+
+
+
+php artisan make:migration update_user_table_name_to_username --table=users = cria uma migração de uma tabela que foi adicionada
+
+php artisan make:migration update_user_table_add_avatar_field --table=users
+
+php artisan route:list: verifica aS ROtas
+
+php artisan make:component {name}; cria um componente
+
+ php artisan make:model {name} -mrR: cria um conjuto de controller Model e request
+</p>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Profile\AvatarController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -56,6 +57,17 @@ Route::get('/auth/callback', function () {
     Auth::login($user);
 
     return redirect('/dashboard');
+});
+
+
+
+
+Route::middleware('auth')->prefix('ticket')->group(function() {
+    Route::resource('ticket', TicketController::class,['create','store']);
+
+    //Route::get('/ticket/create', [TicketController::class, 'create'])->name('ticket.create');
+    //Route::post('/ticket/create', [TicketController::class, 'store'])->name('ticket.store');
+
 });
 
 require __DIR__.'/auth.php';
