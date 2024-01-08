@@ -20,12 +20,16 @@
 
             <div class="flex flex-col justify-center">
                 <a href="{{ route('ticket.create')}}" class="ms-3 bg-stone-900 rounded-lg p-2">
-                   suporte bilhete
+                   criar bilhete
                 </a>
             </div>
 
 
-
+            <div class="flex flex-col justify-center">
+                <a href="{{ route('ticket.index')}}" class="ms-3 bg-stone-900 rounded-lg p-2">
+                   Meus Bilhetes
+                </a>
+            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

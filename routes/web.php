@@ -48,6 +48,7 @@ Route::post('/auth/redirect', function () {
 
 Route::get('/auth/callback', function () {
     $userGith = Socialite::driver('github')->user();
+
     $user = User::updateOrCreate(['email'=> $userGith->email],[
         'name' => $userGith->name,
         'email' => $userGith->email,
@@ -62,12 +63,8 @@ Route::get('/auth/callback', function () {
 
 
 
-Route::middleware('auth')->prefix('ticket')->group(function() {
-    Route::resource('ticket', TicketController::class,['create','store']);
-
-    //Route::get('/ticket/create', [TicketController::class, 'create'])->name('ticket.create');
-    //Route::post('/ticket/create', [TicketController::class, 'store'])->name('ticket.store');
-
+Route::middleware('auth')->group(function() {
+    Route::resource('/ticket', TicketController::class,['create','store']);
 });
 
 require __DIR__.'/auth.php';
